@@ -8,7 +8,7 @@ int main() {
     int count;
     for (int i = 33; i < 39; i++) {
         j = i;
-        while  (j < i + 90) {
+        while  (j < i + 91 && j < 127) {
             temp = j;
             digit = 1;
             hex = 0;
