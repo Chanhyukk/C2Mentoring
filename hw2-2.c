@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 void printnum(int n) {
-    if (n != 0) {
+    if (n > 0) {
         int temp = n;
         int digit = 0;
         while (temp != 0) {
@@ -13,6 +13,24 @@ void printnum(int n) {
             arr[i] = (n % 10);
             n /= 10;
         }
+        for (int i = 0; i < digit; i++) {
+            putchar(arr[i] + '0');
+        }
+    }
+    else if (n < 0) {
+        n *= -1;
+        int temp = n;
+        int digit = 0;
+        while (temp != 0) {
+            digit++;
+            temp /= 10;
+        }
+        char arr[digit];
+        for (int i = digit - 1; i > -1; i--) {
+            arr[i] = (n % 10);
+            n /= 10;
+        }
+        putchar('-');
         for (int i = 0; i < digit; i++) {
             putchar(arr[i] + '0');
         }
