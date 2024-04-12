@@ -8,8 +8,7 @@ int main() {
     int count;
     for (int i = 33; i < 39; i++) {
         j = i;
-        count = 0;
-        while  (j < 127 && count < 17) {
+        while  (j < i + 90) {
             temp = j;
             digit = 1;
             hex = 0;
@@ -20,7 +19,6 @@ int main() {
             }
             printf("%d %d %c ", j, hex, j);
             j+= 6;
-            count++;
         }
         printf("\n");
     }
