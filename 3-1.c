@@ -17,7 +17,7 @@ double add(char v[], int start, int end) {
         double fraction = 0.1;
         for (int i = point + 1; i < end; i++) {
             if (v[i] >= '0' && v[i] <= '9') {
-                number += fraction * (v[i] - '0');
+                number = number + fraction * (v[i] - '0');
                 fraction /= 10;
             }
         }
