@@ -39,17 +39,17 @@ void qsort(double* arr[], int start, int end, int (*comp)(double*, double*)) {
 int main() {
     double arr[] = {1.1, 9.9, 2.2, 8.8, 3.3, 7.7, 4.4, 6.6, 5.5, 0.0};
     int size = sizeof(arr) / sizeof(arr[0]);
-    double* arr_ptrs[size];
+    double* arr_pnt[size];
     for (int i = 0; i < size; i++) {
         printf("%.1f ", arr[i]);
     }
     printf("\n");
     for (int i = 0; i < size; i++) {
-        arr_ptrs[i] = &arr[i];
+        arr_pnt[i] = &arr[i];
     }
-    qsort(arr_ptrs, 0, size - 1, comp);
+    qsort(arr_pnt, 0, size - 1, comp);
     for (int i = 0; i < size; i++) {
-        printf("%.1f ", *arr_ptrs[i]);
+        printf("%.1f ", *arr_pnt[i]);
     }
     printf("\n");
     return 0;
