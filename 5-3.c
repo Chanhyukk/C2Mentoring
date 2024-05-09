@@ -2,12 +2,11 @@
 #include <string.h>
 
 int mystrlen(char *s) {
-    int len = 0;
-    while (*s != '\0') {
-        len++;
+    int i;
+    for (i = 0; *s != '\0'; i++) {
         s++;
     }
-    return len;
+    return i;
 }
 
 int main() {
