@@ -2,12 +2,12 @@
 #include <string.h>
 
 int mystrlen(char *s) {
-    int i = 0;
+    int len = 0;
     while (*s != '\0') {
-        i++;
+        len++;
         s++;
     }
-    return i;
+    return len;
 }
 
 int main() {
@@ -18,6 +18,7 @@ int main() {
         printf("%s %d\n", *(s + i), (int)strlen(s[i]));
     }
     putchar('\n');
+    printf("without mystrlen\n");
     for (int i = 0; i < n; i++) {
         printf("%s %d\n", *(s + i), mystrlen(s[i]));
     }
