@@ -32,7 +32,7 @@ int main(int argc, char *argv[]) {
     int sum = 0;
     while ((c = getchar()) != EOF) {
         if (c >= '0' && c <= '9') {
-            sum = sum * 10 + c - '0';
+            sum = sum * 10 + (c - '0');
         }
         else if (c == '\n') {
             arr[i] = sum;
@@ -45,12 +45,12 @@ int main(int argc, char *argv[]) {
     qsort(arr, 0, i - 1);
     if (strcmp(argv[argc - 1], "-n") == 0) {
         for (int j = i - 1; j > -1; j--) {
-            printf("%d ", arr[j]);
+            printf("%d\n", arr[j]);
         }
     }
     else {
         for (int j = 0; j < i; j++) {
-            printf("%d ", arr[j]);
+            printf("%d\n", arr[j]);
         }
     }
 
