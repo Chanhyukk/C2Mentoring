@@ -6,7 +6,7 @@ int main(int argc, char *argv[]) {
     int len = 0, wordcount = 0, charcount = 0, wordcon = 0;
     int c;
     if(argc > 1) {
-        fp = fopen(*++argv, "r");
+        fp = fopen(argv[1], "r");
         while ((c = getc(fp)) != EOF) {
             putchar(c);
             charcount++;
