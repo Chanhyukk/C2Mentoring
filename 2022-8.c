@@ -20,7 +20,7 @@ void printCalendar(int month, int year) {
         monthDay = 31;
     }
 
-    printf("    %4d년 %2d월\n", year, month);
+    printf("    %3d월 %2d\n", month, year);
     printf("일 월 화 수 목 금 토\n");
 
     int startDay = firstDay.tm_wday;
